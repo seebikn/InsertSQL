@@ -13,12 +13,12 @@ jobs:
     steps:
       - name: Set Variable
         run: |
-          echo "WIN_X86=.\DotNetTest\publish\win-x86\" >> "$env:GITHUB_ENV"
-          echo "WIN_X64=.\DotNetTest\publish\win-x64\" >> "$env:GITHUB_ENV"
-          echo "WIN_ARM64=.\DotNetTest\publish\win-arm64\" >> "$env:GITHUB_ENV"
-          echo "ZIPNAME_X86=DotNetTest-x86-${{ github.ref_name }}.zip" >> "$env:GITHUB_ENV"
-          echo "ZIPNAME_X64=DotNetTest-x64-${{ github.ref_name }}.zip" >> "$env:GITHUB_ENV"
-          echo "ZIPNAME_ARM64=DotNetTest-arm64-${{ github.ref_name }}.zip" >> "$env:GITHUB_ENV"
+          echo "WIN_X86=.\InsertSQL\publish\win-x86\" >> "$env:GITHUB_ENV"
+          echo "WIN_X64=.\InsertSQL\publish\win-x64\" >> "$env:GITHUB_ENV"
+          echo "WIN_ARM64=.\InsertSQL\publish\win-arm64\" >> "$env:GITHUB_ENV"
+          echo "ZIPNAME_X86=InsertSQL-x86-${{ github.ref_name }}.zip" >> "$env:GITHUB_ENV"
+          echo "ZIPNAME_X64=InsertSQL-x64-${{ github.ref_name }}.zip" >> "$env:GITHUB_ENV"
+          echo "ZIPNAME_ARM64=InsertSQL-arm64-${{ github.ref_name }}.zip" >> "$env:GITHUB_ENV"
           Write-Output ("VERSION=" + ("${{ github.ref_name }}" -replace 'v', '')) >> "$env:GITHUB_ENV"
 
       # リポジトリからファイルをチェックアウト

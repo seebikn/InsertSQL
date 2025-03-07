@@ -94,7 +94,7 @@
             ButtonCreateSql.Name = "ButtonCreateSql";
             ButtonCreateSql.Size = new Size(125, 23);
             ButtonCreateSql.TabIndex = 8;
-            ButtonCreateSql.Text = "Create Insert SQL";
+            ButtonCreateSql.Text = "Create Insert SQL (&e)";
             ButtonCreateSql.UseVisualStyleBackColor = true;
             // 
             // TextData

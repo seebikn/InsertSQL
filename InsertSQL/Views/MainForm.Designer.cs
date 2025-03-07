@@ -80,8 +80,6 @@
             // CheckboxColumnName
             // 
             CheckboxColumnName.AutoSize = true;
-            CheckboxColumnName.Checked = true;
-            CheckboxColumnName.CheckState = CheckState.Checked;
             CheckboxColumnName.Location = new Point(450, 8);
             CheckboxColumnName.Name = "CheckboxColumnName";
             CheckboxColumnName.Size = new Size(90, 19);
@@ -108,6 +106,7 @@
             TextData.Name = "TextData";
             TextData.Size = new Size(776, 209);
             TextData.TabIndex = 6;
+            TextData.WordWrap = false;
             // 
             // TextSql
             // 
@@ -118,6 +117,7 @@
             TextSql.ReadOnly = true;
             TextSql.Size = new Size(776, 155);
             TextSql.TabIndex = 7;
+            TextSql.WordWrap = false;
             // 
             // CheckboxRemoveLineBreaks
             // 

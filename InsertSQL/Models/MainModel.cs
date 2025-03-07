@@ -125,6 +125,11 @@
                 return treatNullAsEmpty ? "NULL" : "\"\"";
             }
 
+            if (string.Compare("sysdate", value, StringComparison.CurrentCultureIgnoreCase) == 0)
+            {
+                return value;
+            }
+
             if (treatDateAsToDate && DateTime.TryParse(value, out DateTime date))
             {
                 // 時刻が含まれる場合はフォーマットに時分秒を追加

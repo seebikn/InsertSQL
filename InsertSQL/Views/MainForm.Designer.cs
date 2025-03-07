@@ -101,6 +101,7 @@
             // 
             // TextData
             // 
+            TextData.AcceptsTab = true;
             TextData.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             TextData.Location = new Point(12, 35);
             TextData.Multiline = true;

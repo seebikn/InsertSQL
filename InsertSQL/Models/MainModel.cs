@@ -92,8 +92,8 @@
         public string GenerateSql(string tableName, string row, string[] columnNames, bool treatNullAsEmpty, bool treatDateAsToDate, bool removeLineBreaks)
         {
             string[] values = ParseRow(row).Select(value => ProcessValue(value, treatNullAsEmpty, treatDateAsToDate, removeLineBreaks)).ToArray();
-            
-            if (columnNames == null) 
+
+            if (columnNames == null)
             {
                 return $"INSERT INTO {tableName} VALUES ({string.Join(", ", values)});";
             }
@@ -125,6 +125,11 @@
                 return treatNullAsEmpty ? "NULL" : "\"\"";
             }
 
+            if (string.Compare("sysdate", value, StringComparison.CurrentCultureIgnoreCase) == 0)
+            {
+                return value;
+            }
+
             if (treatDateAsToDate && DateTime.TryParse(value, out DateTime date))
             {
                 // 時刻が含まれる場合はフォーマットに時分秒を追加
@@ -134,7 +139,7 @@
                 return format;
             }
 
-            return $"\"{value.Replace("\"", "\"\"").TrimEnd('\r', '\n')}\"";
+            return $"'{value.Replace("\"", "\"\"").TrimEnd('\r', '\n')}'";
         }
 
     }

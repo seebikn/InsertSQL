@@ -80,8 +80,6 @@
             // CheckboxColumnName
             // 
             CheckboxColumnName.AutoSize = true;
-            CheckboxColumnName.Checked = true;
-            CheckboxColumnName.CheckState = CheckState.Checked;
             CheckboxColumnName.Location = new Point(450, 8);
             CheckboxColumnName.Name = "CheckboxColumnName";
             CheckboxColumnName.Size = new Size(90, 19);
@@ -96,17 +94,19 @@
             ButtonCreateSql.Name = "ButtonCreateSql";
             ButtonCreateSql.Size = new Size(125, 23);
             ButtonCreateSql.TabIndex = 8;
-            ButtonCreateSql.Text = "Create Insert SQL";
+            ButtonCreateSql.Text = "Create Insert SQL (&e)";
             ButtonCreateSql.UseVisualStyleBackColor = true;
             // 
             // TextData
             // 
+            TextData.AcceptsTab = true;
             TextData.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             TextData.Location = new Point(12, 35);
             TextData.Multiline = true;
             TextData.Name = "TextData";
             TextData.Size = new Size(776, 209);
             TextData.TabIndex = 6;
+            TextData.WordWrap = false;
             // 
             // TextSql
             // 
@@ -117,6 +117,7 @@
             TextSql.ReadOnly = true;
             TextSql.Size = new Size(776, 155);
             TextSql.TabIndex = 7;
+            TextSql.WordWrap = false;
             // 
             // CheckboxRemoveLineBreaks
             // 

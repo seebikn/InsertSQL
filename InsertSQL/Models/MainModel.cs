@@ -92,8 +92,8 @@
         public string GenerateSql(string tableName, string row, string[] columnNames, bool treatNullAsEmpty, bool treatDateAsToDate, bool removeLineBreaks)
         {
             string[] values = ParseRow(row).Select(value => ProcessValue(value, treatNullAsEmpty, treatDateAsToDate, removeLineBreaks)).ToArray();
-            
-            if (columnNames == null) 
+
+            if (columnNames == null)
             {
                 return $"INSERT INTO {tableName} VALUES ({string.Join(", ", values)});";
             }
@@ -134,7 +134,7 @@
                 return format;
             }
 
-            return $"\"{value.Replace("\"", "\"\"").TrimEnd('\r', '\n')}\"";
+            return $"'{value.Replace("\"", "\"\"").TrimEnd('\r', '\n')}'";
         }
 
     }
